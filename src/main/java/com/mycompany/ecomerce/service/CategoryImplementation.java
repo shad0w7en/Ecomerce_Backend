@@ -27,9 +27,15 @@ public class CategoryImplementation implements CategoryInterface{
     }
 
     @Override
-    public boolean addCategory(Category category){
+    public Category addCategory(Category category){
+        category.setId(categories.size() + 1);
         categories.add(category);
-        return true;
+        return  category;
+    }
+
+    @Override
+    public boolean deleteCategoryById(long id) {
+        return categories.removeIf(category -> category.getId() == id);
     }
 
 

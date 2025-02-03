@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CategoryInterface {
-    List<Category> getAllCategory();
-    Optional<Category> getCategoryById(long id);
-    public boolean addCategory(Category category);
+    public List<Category> getAllCategory();
+    public Optional<Category> getCategoryById(long id);
+    public Category addCategory(Category category);
+    public boolean deleteCategoryById(long id);
 }
