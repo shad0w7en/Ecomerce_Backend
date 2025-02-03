@@ -1,13 +1,19 @@
 package com.mycompany.ecomerce.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+@Entity
 public class Category {
 
+    @Id
     private long id;
     private String name;
+
+    public Category(){}
 
     public Category(long id, String name) {
         this.id = id;
